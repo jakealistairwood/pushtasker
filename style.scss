@@ -1,0 +1,67 @@
+@import './styles/main.scss';
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.navbar__wrapper {
+    width: 100%;
+    height: 10vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+
+    .navbar__nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+
+        .navbar__nav-links {
+            display: flex;
+            flex-direction: row;
+
+            li {
+                a {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    background-color: $primaryPurple;
+    height: 100vh;
+    width: 100%;
+    background-image: url(./img/bg-detail-corner.svg);
+    background-position: top right;
+    background-repeat: no-repeat;
+
+    .hero__container {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin: 0 auto;
+        padding-top: 200px;
+
+        p {
+            width: 50%;
+            color: $secondaryPurple;
+            font-size: 24px;
+            line-height: 40px;
+            margin-top: 30px;
+        }
+
+        button {
+            margin-top: 30px;
+
+            a {
+                color: #E5E5E5;
+            }
+        }
+    }
+}

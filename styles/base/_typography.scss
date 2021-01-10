@@ -1,0 +1,15 @@
+@import '../utils/variables';
+
+body {
+    font-family: $primaryFont;
+}
+
+h1 {
+    font-size: 64px;
+    font-weight: 700;
+    color: #F4F4F4;
+}
+
+p {
+    line-height: 30px;
+}
