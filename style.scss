@@ -57,13 +57,7 @@ body {
     }
 }
 
-.hero {
-    background-color: $primaryPurple;
-    background-image: url('./img/bg-detail-corner.svg');
-    background-repeat: no-repeat;
-    background-position: top right;
-    height: 100vh;
-    width: 100%;
+.skewed {
     position: relative;
     overflow: visible;
     z-index: 1;
@@ -80,6 +74,16 @@ body {
         transform: skewY(-4.42deg);
         background-color: $primaryPurple;
     }
+}
+
+.hero {
+    background-color: $primaryPurple;
+    background-image: url('./img/bg-detail-corner.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    height: 100vh;
+    width: 100%;
+    position: relative;
 
     .hero__container {
         display: flex;
@@ -115,6 +119,107 @@ body {
     .hero__img {
         width: 60%;
         margin: 0 auto;
+    }
+}
+
+.feature {
+    height: 80vh;
+    width: 100%;
+    margin-top: 600px;
+
+    .feature__container {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: 0 auto;
+
+        h2 {
+            font-size: 48px;
+            font-weight: 700;
+            color: $headerColor;
+            margin-bottom: 60px;
+        }
+
+        .feature__info {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 150px;
+            width: 100%;
+
+            p {
+                font-size: 24px;
+                color: $secondaryPurple;
+                line-height: 40px;
+                width: 50%;
+                text-align: justify;
+            }
+
+            .feature__info-left {
+                padding-right: 35px;
+            }
+
+            .feature__info-right {
+                padding-left: 35px;
+            }
+        }
+
+        .feature__clients {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+        }
+    }
+}
+
+.about {
+    height: 250vh;
+    width: 100%;
+    background-color: $offWhite;
+
+    .about__container {
+        width: 70%;
+        margin: 0 auto;
+        padding-top: 200px;
+
+        h2 {
+            font-size: 48px;
+            text-align: center;
+            color: $headerColor;
+            margin-bottom: 200px;
+        }
+
+        .about__content.reverse {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .about__content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            margin: 150px 0;
+
+            .about__content-info {
+                width: 40%;
+
+                h3 {
+                    font-size: 24px;
+                    font-weight: 700;
+                    color: $headerColor;
+                    margin-bottom: 30px;
+                }
+
+                p {
+                    color: $secondaryPurple;
+                    font-size: 20px;
+                }
+            }
+        }
     }
 }
 
