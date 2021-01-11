@@ -8,10 +8,15 @@
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 li {
   list-style: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 body {
@@ -32,8 +37,8 @@ p {
   background-color: #3C3B63;
   color: #FFF;
   border-radius: 30px;
-  width: 151px;
-  height: 54px;
+  width: 120px;
+  height: 40px;
   border: none;
 }
 
@@ -57,6 +62,7 @@ body {
   position: absolute;
   display: flex;
   align-items: center;
+  z-index: 1000;
 }
 .navbar__wrapper .navbar__nav {
   display: flex;
@@ -69,9 +75,17 @@ body {
 .navbar__wrapper .navbar__nav .navbar__nav-links {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar__wrapper .navbar__nav .navbar__nav-links li {
+  padding-right: 50px;
 }
 .navbar__wrapper .navbar__nav .navbar__nav-links li a {
-  color: #FFF;
+  color: #59586F;
+}
+.navbar__wrapper .navbar__nav .navbar__nav-links li a:hover {
+  color: #F6F5F8;
 }
 
 .hero {
@@ -81,6 +95,20 @@ body {
   background-image: url(./img/bg-detail-corner.svg);
   background-position: top right;
   background-repeat: no-repeat;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+}
+.hero::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  transform-origin: bottom right;
+  transform: skewY(-4.42deg);
+  background-color: #252442;
 }
 .hero .hero__container {
   display: flex;
@@ -96,9 +124,6 @@ body {
   line-height: 40px;
   margin-top: 30px;
 }
-.hero .hero__container button {
+.hero .hero__container a button {
   margin-top: 30px;
-}
-.hero .hero__container button a {
-  color: #E5E5E5;
 }
