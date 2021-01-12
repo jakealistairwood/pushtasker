@@ -119,15 +119,19 @@ body {
     .hero__img {
         width: 60%;
         margin: 0 auto;
+
+        img {
+            width: 100%;
+        }
     }
 }
 
-.feature {
+.about {
     height: 80vh;
     width: 100%;
     margin-top: 600px;
 
-    .feature__container {
+    .about__container {
         display: flex;
         flex-direction: column;
         width: 70%;
@@ -140,7 +144,7 @@ body {
             margin-bottom: 60px;
         }
 
-        .feature__info {
+        .about__info {
             display: flex;
             flex-direction: row;
             margin-bottom: 150px;
@@ -154,16 +158,16 @@ body {
                 text-align: justify;
             }
 
-            .feature__info-left {
+            .about__info-left {
                 padding-right: 35px;
             }
 
-            .feature__info-right {
+            .about__info-right {
                 padding-left: 35px;
             }
         }
 
-        .feature__clients {
+        .about__clients {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
@@ -173,12 +177,13 @@ body {
     }
 }
 
-.about {
-    height: 250vh;
+.feature {
+    // height: 325vh;
     width: 100%;
     background-color: $offWhite;
+    padding-bottom: 100px;
 
-    .about__container {
+    .feature__container {
         width: 70%;
         margin: 0 auto;
         padding-top: 200px;
@@ -190,25 +195,29 @@ body {
             margin-bottom: 200px;
         }
 
-        .about__content.reverse {
+        .feature__content.reverse {
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-between;
             width: 100%;
         }
 
-        .about__content {
+        .feature__content {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            align-items: center;
             width: 100%;
             margin: 150px 0;
+            background-color: rgb(238, 236, 242);
+            border-radius: 7px;
 
-            .about__content-info {
-                width: 40%;
+            .feature__content-info {
+                width: 60%;
+                padding: 0 100px;
 
                 h3 {
-                    font-size: 24px;
+                    font-size: 32px;
                     font-weight: 700;
                     color: $headerColor;
                     margin-bottom: 30px;
@@ -217,6 +226,15 @@ body {
                 p {
                     color: $secondaryPurple;
                     font-size: 20px;
+                }
+            }
+
+            .feature-content-img {
+                width: 150px;
+                height: 150px;
+
+                img {
+                    width: 100%;
                 }
             }
         }
