@@ -209,6 +209,10 @@ body {
             text-align: center;
             color: $headerColor;
             margin-bottom: 200px;
+
+            .feature__header-span {
+                color: $secondaryPurple;
+            }
         }
 
         .feature__content.reverse {
@@ -428,7 +432,7 @@ body {
 
             a {
                 margin-bottom: 50px;
-                
+
                 button {
                     display: flex;
                     flex-direction: row;
