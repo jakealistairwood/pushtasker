@@ -1,5 +1,5 @@
 // ==============================================
-//             Site Colours & Typography
+//                 Site Colours
 // ==============================================
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
@@ -17,8 +17,19 @@ $white: #FFF;
 // Headers
 $headerColor: #3C3B63;
 
-// Typography
+// ==============================================
+//               Site Typography
+// ==============================================
+
+// Font-Family
 $primaryFont: 'Inter', sans-serif;
 
+// Font-sizes
+
+$font-xs: 16px;
+$font-sm: 20px;
+$font-md: 24px;
+$font-lg: 32px;
+$font-xl: 48px;
 
 
