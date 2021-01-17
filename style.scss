@@ -4,144 +4,18 @@ body {
     height: 100%;
     width: 100%;
 }
-
-// ===================================================
-//                    Navbar Section
-// ===================================================
-
-.navbar__wrapper {
-    width: 100%;
-    height: 10vh;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    z-index: 1000;
-
-    .navbar__nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 80%;
-        margin: 0 auto;
-
-        .navbar__nav-links {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            li {
-
-                padding-right: 50px;
-
-                a {
-                    color: $tertiaryPurple;
-                    transition: 0.3s ease-in;
-
-                    &:hover {
-                        color: $offWhite;
-                    }
-                }
-            }
-
-            a {
-                .navbar__btn {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-
-                    span {
-                        font-size: 16px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-// ===================================================
-//                    Hero Section
-// ===================================================
-
-.hero.skewed {
-    position: relative;
-    overflow: visible;
-    z-index: 1;
-
-    &::after {
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background: inherit;
-        z-index: -1;
-        bottom: 0;
-        transform-origin: bottom right;
-        transform: skewY(-4.42deg);
-        background-color: $primaryPurple;
-    }
-}
-
-.hero {
-    background-color: $primaryPurple;
-    background-image: url('./img/bg-detail-corner.svg');
-    background-repeat: no-repeat;
-    background-position: top right;
-    height: 100vh;
-    width: 100%;
-    position: relative;
-
-    .hero__container {
-        display: flex;
-        flex-direction: column;
-        width: 60%;
-        margin: 0 auto;
-        padding-top: 200px;
-
-        p {
-            width: 50%;
-            color: $secondaryPurple;
-            font-size: 24px;
-            line-height: 40px;
-            margin-top: 30px;
-        }
-
-        a {
-            .hero__btn {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                margin-top: 30px;
-
-                span {
-                    padding-right: 10px;
-                    font-size: 16px;
-                }
-            }
-        }
-    }
-
-    .hero__img {
-        width: 60%;
-        margin: 0 auto;
-
-        img {
-            width: 100%;
-        }
-    }
-}
-
 // ===================================================
 //                    About Section
 // ===================================================
 
 .about {
-    height: 80vh;
     width: 100%;
     margin-top: 600px;
+
+    @media screen and (min-width: 1025px) and (max-width: 1280px) {
+        /* Styles for Desktops */
+        margin-top: 400px;
+    }
 
     .about__container {
         display: flex;
@@ -185,6 +59,7 @@ body {
             justify-content: space-around;
             align-items: center;
             width: 100%;
+            margin-bottom: 200px;
         }
     }
 }
@@ -204,8 +79,13 @@ body {
         margin: 0 auto;
         padding-top: 200px;
 
+        @media screen and (min-width: 1025px) and (max-width: 1280px) {
+            /* Styles for Desktops */
+            width: 80%;
+        }
+
         h2 {
-            font-size: 48px;
+            font-size: $font-xl;
             text-align: center;
             color: $headerColor;
             margin-bottom: 200px;
@@ -222,7 +102,7 @@ body {
             width: 100%;
 
             .feature__content-info {
-                padding: 0px;
+                padding: 0px 35px;
             }
         }
 
@@ -237,33 +117,49 @@ body {
             background-color: rgb(238, 236, 242);
             border-radius: 7px;
 
+            @media screen and (min-width: 1025px) and (max-width: 1280px) {
+                /* Styles for Desktops */
+                min-height: 300px;
+            }
+
             .feature__content-info {
                 width: 60%;
                 padding: 0 100px;
 
+                @media screen and (min-width: 1025px) and (max-width: 1280px) {
+                    /* Styles for Desktops */
+                    padding: 0 30px;
+                }
+
                 h3 {
-                    font-size: 32px;
+                    font-size: $font-lg;
                     font-weight: 700;
                     color: $headerColor;
                     margin-bottom: 30px;
                     margin-top: 50px;
+
+                    @media screen and (min-width: 1025px) and (max-width: 1280px) {
+                        /* Styles for Desktops */
+                        font-size: $font-md;
+                    }
                 }
 
                 p {
                     color: $secondaryPurple;
-                    font-size: 20px;
+                    font-size: $font-sm;
                     margin-bottom: 50px;
+                    text-align: justify;
+
+                    @media screen and (min-width: 1025px) and (max-width: 1280px) {
+                        /* Styles for Desktops */
+                        font-size: $font-xs;
+                    }
                 }
             }
 
             .feature__content-img {
                 width: 40%;
                 height: 100%;
-
-                // @media screen and (min-width: 1025px) and (max-width: 1280px) {
-                //     /* Styles for Desktops */
-                //     width: 100px;
-                // }
 
                 img {
                     width: 100%;
@@ -293,15 +189,28 @@ body {
         h2 {
             margin-top: 150px;
             margin-bottom: 40px;
-            width: 60%;
+            width: 70%;
             color: $headerColor;
+            font-size: $font-xl;
+
+            @media screen and (min-width: 1025px) and (max-width: 1280px) {
+                /* Styles for Desktops */
+                width: 70%;
+                font-size: 40px;
+            }
         }
 
         p {
             color: $secondaryPurple;
             width: 35%;
-            font-size: 24px;
+            font-size: $font-sm;
             margin-bottom: 90px;
+
+            @media screen and (min-width: 1025px) and (max-width: 1280px) {
+                /* Styles for Desktops */
+                width: 70%;
+                font-size: $font-xs;
+            }
         }
 
         .pricing__btns {
@@ -365,6 +274,11 @@ body {
 
         h2 {
             color: $white;
+
+            @media screen and (min-width: 1025px) and (max-width: 1280px) {
+                /* Styles for Desktops */
+                font-size: 40px;
+            }
         }
 
         a {
@@ -375,6 +289,12 @@ body {
                 width: 300px;
                 height: 100px;
                 font-size: 24px;
+
+                @media screen and (min-width: 1025px) and (max-width: 1280px) {
+                    /* Styles for Desktops */
+                    width: 230px;
+                    height: 70px;
+                }
             }
         }
     }
