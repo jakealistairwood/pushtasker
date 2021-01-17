@@ -5,71 +5,96 @@ body {
     width: 100%;
 }
 
-.hero.skewed {
-    position: relative;
-    overflow: visible;
-    z-index: 1;
+.pricing__plans {
+    display: flex;
+    flex-direction: row;
 
-    &::after {
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background: inherit;
-        z-index: -1;
-        bottom: 0;
-        transform-origin: bottom right;
-        transform: skewY(-4.42deg);
-        background-color: $primaryPurple;
-    }
-}
-
-.hero {
-    background-color: $primaryPurple;
-    background-image: url('./img/bg-detail-corner.svg');
-    background-repeat: no-repeat;
-    background-position: top right;
-    height: 100vh;
-    width: 100%;
-    position: relative;
-
-    .hero__container {
-        display: flex;
-        flex-direction: column;
-        width: 60%;
+    .pricing__plan {
+        background-color: $white;
+        padding: 20px;
+        width: 45%;
         margin: 0 auto;
-        padding-top: 200px;
+        border-radius: 12px;
+        margin-top: 200px;
 
-        p {
-            width: 50%;
-            color: $secondaryPurple;
-            font-size: 24px;
-            line-height: 40px;
-            margin-top: 30px;
+        h2 {
+            color: $primaryPurple;
+            font-size: $font-xl;
+            text-align: center;
+            margin: 30px 0;
         }
 
-        a {
-            .hero__btn {
+        .pricing__plan-cost {
+
+        }
+
+        .pricing__plan-features {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .pricing__plan-feature {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                justify-content: center;
-                margin-top: 30px;
+            }
 
-                span {
-                    padding-right: 10px;
-                    font-size: 16px;
+            a {
+
+                button {
+                    background-color: $primaryGreen;
+                    color: $white;
+                    font-weight: 700;
+                    width: 100%;
+                    height: 60px;
+                    border: none;
+                    border-radius: 10px;
                 }
             }
         }
     }
+}
 
-    .hero__img {
-        width: 60%;
+.plan-backgrounds {
+    height: 100vh;
+    width: 100%;
+    background-color: $offWhite;
+}
+
+.faqs {
+    width: 100%;
+    height: 100vh;
+    background-color: $white;
+
+    .faqs__container {
+        width: 80%;
         margin: 0 auto;
 
-        img {
-            width: 100%;
+        h2 {
+            text-align: center;
+            margin: 100px 0;
+            color: $primaryPurple;
         }
     }
 }
+
+.cta {
+    width: 100%;
+    height: 30vh;
+    background-color: $primaryGreen;
+
+    .cta__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+
+        h2 {
+            color: $white;
+        }
+    }
+}
+

@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -40,6 +42,84 @@ h3 {
 
 p {
   line-height: 40px;
+}
+
+.footer__wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #252442;
+}
+.footer__wrapper .footer__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.footer__wrapper .footer__container .footer__middle {
+  display: flex;
+  flex-direction: row;
+}
+.footer__wrapper .footer__container .footer__middle .footer__middle-left {
+  padding-right: 60px;
+}
+.footer__wrapper .footer__container .footer__middle .footer__middle-right {
+  padding-left: 60px;
+}
+.footer__wrapper .footer__container .footer__middle .footer__middle-left,
+.footer__wrapper .footer__container .footer__middle .footer__middle-right {
+  display: flex;
+  flex-direction: column;
+}
+.footer__wrapper .footer__container .footer__middle .footer__middle-left h4,
+.footer__wrapper .footer__container .footer__middle .footer__middle-right h4 {
+  color: #8887AA;
+}
+.footer__wrapper .footer__container .footer__middle .footer__middle-left ul li,
+.footer__wrapper .footer__container .footer__middle .footer__middle-right ul li {
+  margin: 20px 0;
+}
+.footer__wrapper .footer__container .footer__middle .footer__middle-left ul li a,
+.footer__wrapper .footer__container .footer__middle .footer__middle-right ul li a {
+  color: #59586F;
+  transition: 0.3s ease-in;
+}
+.footer__wrapper .footer__container .footer__middle .footer__middle-left ul li a:hover,
+.footer__wrapper .footer__container .footer__middle .footer__middle-right ul li a:hover {
+  color: #F6F5F8;
+}
+.footer__wrapper .footer__container .footer__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100%;
+}
+.footer__wrapper .footer__container .footer__right a {
+  margin-bottom: 50px;
+}
+.footer__wrapper .footer__container .footer__right a button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #4DCCBD;
+  border: none;
+  border-radius: 30px;
+  width: 150px;
+  height: 54px;
+}
+.footer__wrapper .footer__container .footer__right a button span {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 30px;
+}
+.footer__wrapper .footer__container .footer__right .footer__copyright {
+  font-size: 16px;
+  color: #59586F;
+  text-align: right;
 }
 
 .navbar__btn {
@@ -102,11 +182,6 @@ p {
   font-size: 16px;
 }
 
-body {
-  height: 100%;
-  width: 100%;
-}
-
 .hero.skewed {
   position: relative;
   overflow: visible;
@@ -165,4 +240,86 @@ body {
 }
 .hero .hero__img img {
   width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.pricing__plans {
+  display: flex;
+  flex-direction: row;
+}
+.pricing__plans .pricing__plan {
+  background-color: #FFF;
+  padding: 20px;
+  width: 45%;
+  margin: 0 auto;
+  border-radius: 12px;
+  margin-top: 200px;
+}
+.pricing__plans .pricing__plan h2 {
+  color: #252442;
+  font-size: 48px;
+  text-align: center;
+  margin: 30px 0;
+}
+.pricing__plans .pricing__plan .pricing__plan-features {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pricing__plans .pricing__plan .pricing__plan-features .pricing__plan-feature {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.pricing__plans .pricing__plan .pricing__plan-features a button {
+  background-color: #4DCCBD;
+  color: #FFF;
+  font-weight: 700;
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+}
+
+.plan-backgrounds {
+  height: 100vh;
+  width: 100%;
+  background-color: #F6F5F8;
+}
+
+.faqs {
+  width: 100%;
+  height: 100vh;
+  background-color: #FFF;
+}
+.faqs .faqs__container {
+  width: 80%;
+  margin: 0 auto;
+}
+.faqs .faqs__container h2 {
+  text-align: center;
+  margin: 100px 0;
+  color: #252442;
+}
+
+.cta {
+  width: 100%;
+  height: 30vh;
+  background-color: #4DCCBD;
+}
+.cta .cta__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+.cta .cta__container h2 {
+  color: #FFF;
 }
