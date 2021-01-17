@@ -220,6 +220,10 @@ body {
             flex-direction: row-reverse;
             justify-content: space-between;
             width: 100%;
+
+            .feature__content-info {
+                padding: 0px;
+            }
         }
 
         .feature__content {
@@ -252,13 +256,22 @@ body {
                 }
             }
 
-            .feature-content-img {
-                width: auto;
-                max-width: 350px;
+            .feature__content-img {
+                width: 40%;
                 height: 100%;
+
+                // @media screen and (min-width: 1025px) and (max-width: 1280px) {
+                //     /* Styles for Desktops */
+                //     width: 100px;
+                // }
 
                 img {
                     width: 100%;
+
+                //     @media screen and (min-width: 1025px) and (max-width: 1280px) {
+                //         /* Styles for Desktops */
+                //         width: 100%;
+                //     }
                 }
             }
         }
@@ -355,7 +368,7 @@ body {
         }
 
         a {
-            button {
+            .cta__btn {
                 color: $primaryGreen;
                 background-color: transparent;
                 border: 5px solid $primaryGreen;

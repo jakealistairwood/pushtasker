@@ -11,7 +11,8 @@ body {
 
     .pricing__plan {
         background-color: $white;
-        padding: 20px;
+        box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.1);
+        padding: 30px;
         width: 45%;
         margin: 0 auto;
         border-radius: 12px;
@@ -24,8 +25,35 @@ body {
             margin: 30px 0;
         }
 
+        p {
+            color: $secondaryPurple;
+        }
+
         .pricing__plan-cost {
             display: flex;
+            position: relative;
+            width: 100px;
+            height: 110px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            margin-top: 30px;
+
+            small {
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: $primaryGreen;
+                font-size: $font-md;
+                font-weight: 400;
+            }
+            
+            .pricing__plan-cost-value {
+                font-size: $font-xl;
+                font-weight: 800;
+                color: $primaryPurple;
+            }
         }
 
         .pricing__plan-features {
@@ -33,23 +61,25 @@ body {
             flex-direction: column;
             justify-content: space-between;
 
+            h4 {
+                font-size: $font-md;
+                color: $primaryPurple;
+                font-weight: 700;
+                margin: 30px 0;
+            }
+
+            p {
+                color: $secondaryPurple;
+            }
+
             .pricing__plan-feature {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
             }
 
-            a {
-
-                button {
-                    background-color: $primaryGreen;
-                    color: $white;
-                    font-weight: 700;
-                    width: 100%;
-                    height: 60px;
-                    border: none;
-                    border-radius: 10px;
-                }
+            p {
+                padding-left: 20px;
             }
         }
     }
@@ -74,6 +104,41 @@ body {
             text-align: center;
             margin: 100px 0;
             color: $primaryPurple;
+        }
+
+        .faqs__questions {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+
+            .faqs__question {
+                display: flex;
+                flex-direction: column;
+                width: 30%;
+                padding: 50px 0;
+
+                .faqs__question-one {
+                    border-bottom: none;
+                }
+                
+                div {
+                    border-top: 1px solid $primaryGreen;
+                    border-bottom: 1px solid $primaryGreen;
+                    padding: 50px 0;
+
+                    h3 {
+                        font-size: $font-md;
+                        color: $primaryPurple;
+                        margin-bottom: 25px;
+                    }
+
+                    p {
+                        font-size: $font-xs;
+                        color: $secondaryPurple;
+                    }
+                }
+            }
         }
     }
 }

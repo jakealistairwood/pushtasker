@@ -1,3 +1,5 @@
+@import '../utils/variables';
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -15,4 +17,8 @@ li {
 
 button {
     cursor: pointer;
+}
+
+.green-detail {
+    color: $primaryGreen;
 }
