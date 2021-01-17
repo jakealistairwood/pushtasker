@@ -127,6 +127,12 @@ p {
   color: #59586F;
   text-align: right;
 }
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .footer__wrapper .footer__container .footer__right .footer__copyright {
+    /* Styles for Desktops */
+    font-size: 12px;
+  }
+}
 
 .navbar__btn {
   background-color: #3C3B63;
@@ -233,6 +239,13 @@ p {
   width: 100%;
   position: relative;
 }
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+  .hero {
+    /* Styles for Desktops */
+    margin-top: 60px;
+    height: 70vh;
+  }
+}
 .hero .hero__container {
   display: flex;
   flex-direction: column;
@@ -243,9 +256,16 @@ p {
 .hero .hero__container p {
   width: 50%;
   color: #8887AA;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 40px;
   margin-top: 30px;
+}
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .hero .hero__container p {
+    /* Styles for Desktops */
+    width: 70%;
+    font-size: 16px;
+  }
 }
 .hero .hero__container a .hero__btn {
   display: flex;
@@ -261,6 +281,12 @@ p {
 .hero .hero__img {
   width: 60%;
   margin: 0 auto;
+}
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .hero .hero__img {
+    /* Styles for Desktops */
+    margin-top: 60px;
+  }
 }
 .hero .hero__img img {
   width: 100%;
@@ -341,7 +367,7 @@ body {
 }
 
 .plan-backgrounds {
-  height: 100vh;
+  height: 70vh;
   width: 100%;
   background-color: #F6F5F8;
 }

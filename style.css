@@ -239,6 +239,12 @@ p {
   width: 100%;
   position: relative;
 }
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+  .hero {
+    /* Styles for Desktops */
+    height: 80vh;
+  }
+}
 .hero .hero__container {
   display: flex;
   flex-direction: column;
@@ -279,6 +285,12 @@ p {
   .hero .hero__img {
     /* Styles for Desktops */
     margin-top: 60px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+  .hero .hero__img {
+    /* Styles for Desktops */
+    margin-top: 40px;
   }
 }
 .hero .hero__img img {
@@ -350,7 +362,7 @@ body {
   margin: 0 auto;
   padding-top: 200px;
 }
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
+@media screen and (min-width: 500px) and (max-width: 1280px) {
   .feature .feature__container {
     /* Styles for Desktops */
     width: 80%;
@@ -395,7 +407,7 @@ body {
   width: 60%;
   padding: 0 100px;
 }
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
+@media screen and (min-width: 500px) and (max-width: 1280px) {
   .feature .feature__container .feature__content .feature__content-info {
     /* Styles for Desktops */
     padding: 0 30px;
