@@ -25,7 +25,7 @@ body {
         }
 
         .pricing__plan-cost {
-
+            display: flex;
         }
 
         .pricing__plan-features {
@@ -88,12 +88,19 @@ body {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        width: 80%;
+        width: 70%;
         height: 100%;
         margin: 0 auto;
 
         h2 {
             color: $white;
+        }
+         
+        a {
+            .cta__btn {
+                border: 5px solid $white;
+                color: $white;
+            }
         }
     }
 }
