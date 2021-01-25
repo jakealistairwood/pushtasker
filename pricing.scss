@@ -18,11 +18,19 @@ body {
         border-radius: 12px;
         margin-top: 200px;
 
+        @media screen and (max-width: 768px) {
+            margin-top: 100px;
+        }
+
         h2 {
             color: $primaryPurple;
             font-size: $font-xl;
             text-align: center;
             margin: 30px 0;
+
+            @media screen and (max-width: 768px) {
+                font-size: 40px;
+            }
         }
 
         p {
@@ -66,6 +74,10 @@ body {
                 color: $primaryPurple;
                 font-weight: 700;
                 margin: 30px 0;
+
+                @media screen and (max-width: 768px) {
+                    margin: 15px 0;
+                }
             }
 
             p {
@@ -86,19 +98,22 @@ body {
 }
 
 .plan-backgrounds {
-    height: 70vh;
+    height: 80vh;
     width: 100%;
     background-color: $offWhite;
 }
 
 .faqs {
     width: 100%;
-    height: 100vh;
     background-color: $white;
 
     .faqs__container {
-        width: 80%;
+        width: 50%;
         margin: 0 auto;
+
+        @media screen and (max-width: 768px) {
+            width: 80%;
+        }
 
         h2 {
             text-align: center;
@@ -108,35 +123,33 @@ body {
 
         .faqs__questions {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-between;
             width: 100%;
+            margin-bottom: 100px;
 
             .faqs__question {
                 display: flex;
                 flex-direction: column;
-                width: 30%;
+                width: 100%;
                 padding: 50px 0;
+                border-top: 1px solid $primaryGreen;
+                border-bottom: 1px solid $primaryGreen;
 
-                .faqs__question-one {
-                    border-bottom: none;
+                @media screen and (max-width: 768px) {
+                    width: 100%;
                 }
                 
-                div {
-                    border-top: 1px solid $primaryGreen;
-                    border-bottom: 1px solid $primaryGreen;
-                    padding: 50px 0;
+                h3 {
+                    font-size: $font-md;
+                    color: $primaryPurple;
+                    margin-bottom: 25px;
+                    width: 70%;
+                }
 
-                    h3 {
-                        font-size: $font-md;
-                        color: $primaryPurple;
-                        margin-bottom: 25px;
-                    }
-
-                    p {
-                        font-size: $font-xs;
-                        color: $secondaryPurple;
-                    }
+                p {
+                    font-size: $font-xs;
+                    color: $secondaryPurple;
                 }
             }
         }

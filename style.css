@@ -384,9 +384,15 @@ p {
     margin-top: 60px;
   }
 }
-@media screen and (min-width: 500px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .hero .hero__img {
     /* Styles for Desktops */
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero .hero__img {
+    width: 90%;
     margin-top: 40px;
   }
 }
