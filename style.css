@@ -12,6 +12,10 @@
   margin: 0;
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
@@ -211,6 +215,7 @@ p {
 }
 .hero__btn:hover {
   background-color: #504E7A;
+  color: #FFF;
 }
 
 .cta__btn {
@@ -266,17 +271,7 @@ p {
 }
 @media screen and (max-width: 768px) {
   .navbar__wrapper .navbar__nav .navbar__nav-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    right: 0;
-    height: 40vh;
-    top: 10vh;
-    width: 100%;
-    background-color: #252442;
-    transform: translateX(120%);
-    transition: transform 0.5s ease-in;
+    display: none;
   }
 }
 .navbar__wrapper .navbar__nav .navbar__nav-links li {
@@ -619,7 +614,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .about .about__container .about__clients {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     margin-bottom: 200px;
   }

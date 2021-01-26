@@ -36,17 +36,18 @@
             align-items: center;
 
             @media screen and (max-width: 768px) {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                position: absolute;
-                right: 0;
-                height: 40vh;
-                top: 10vh;
-                width: 100%;
-                background-color: $primaryPurple;
-                transform: translateX(120%);
-                transition: transform 0.5s ease-in;
+                display: none;
+                // display: flex;
+                // flex-direction: column;
+                // align-items: center;
+                // position: absolute;
+                // right: 0;
+                // height: 40vh;
+                // top: 10vh;
+                // width: 100%;
+                // background-color: $primaryPurple;
+                // transform: translateX(100%);
+                // transition: transform 0.5s ease-in;
             }
 
             li {
