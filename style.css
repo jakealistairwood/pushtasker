@@ -331,10 +331,15 @@ p {
   width: 100%;
   position: relative;
 }
-@media screen and (min-width: 500px) and (max-width: 1024px) {
+@media screen and (min-width: 501px) and (max-width: 1024px) {
   .hero {
     /* Styles for Desktops */
     height: 80vh;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero {
+    background-image: url("../../img/bg-detail-corner-mobile.svg");
   }
 }
 .hero .hero__container {
@@ -343,6 +348,17 @@ p {
   width: 60%;
   margin: 0 auto;
   padding-top: 200px;
+}
+@media screen and (max-width: 500px) {
+  .hero .hero__container {
+    width: 80%;
+    padding-top: 150px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero .hero__container h1 {
+    font-size: 48px;
+  }
 }
 .hero .hero__container p {
   width: 50%;
@@ -361,6 +377,12 @@ p {
 @media screen and (max-width: 768px) {
   .hero .hero__container p {
     width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero .hero__container p {
+    font-size: 16px;
+    line-height: 30px;
   }
 }
 .hero .hero__container a .hero__btn {
@@ -417,6 +439,11 @@ p {
     width: 80%;
   }
 }
+@media screen and (max-width: 500px) {
+  .cta .cta__container {
+    flex-direction: column;
+  }
+}
 .cta .cta__container h2 {
   color: #FFF;
 }
@@ -429,6 +456,12 @@ p {
 @media screen and (max-width: 768px) {
   .cta .cta__container h2 {
     font-size: 32px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .cta .cta__container h2 {
+    text-align: center;
+    margin-bottom: 50px;
   }
 }
 .cta .cta__container a .cta__btn {
@@ -473,6 +506,11 @@ body {
     margin-top: 350px;
   }
 }
+@media screen and (max-width: 500px) {
+  .about {
+    margin-top: 200px;
+  }
+}
 .about .about__container {
   display: flex;
   flex-direction: column;
@@ -493,6 +531,11 @@ body {
 @media screen and (max-width: 768px) {
   .about .about__container h2 {
     font-size: 48px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .about .about__container h2 {
+    font-size: 32px;
   }
 }
 .about .about__container .about__info {
@@ -516,6 +559,11 @@ body {
 @media screen and (max-width: 768px) {
   .about .about__container .about__info p {
     width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .about .about__container .about__info p {
+    font-size: 16px;
   }
 }
 .about .about__container .about__info .about__info-left {
@@ -572,7 +620,7 @@ body {
   margin: 0 auto;
   padding-top: 200px;
 }
-@media screen and (min-width: 500px) and (max-width: 1280px) {
+@media screen and (min-width: 501px) and (max-width: 1280px) {
   .feature .feature__container {
     /* Styles for Desktops */
     width: 80%;
@@ -580,6 +628,12 @@ body {
 }
 @media screen and (min-width: 768px) {
   .feature .feature__container {
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .feature .feature__container {
+    width: 85%;
     padding-top: 100px;
   }
 }
@@ -592,6 +646,11 @@ body {
 @media screen and (max-width: 768px) {
   .feature .feature__container h2 {
     margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .feature .feature__container h2 {
+    font-size: 32px;
   }
 }
 .feature .feature__container h2 .feature__header-span {
@@ -638,6 +697,11 @@ body {
     flex-direction: column-reverse;
   }
 }
+@media screen and (max-width: 500px) {
+  .feature .feature__container .feature__content {
+    margin: 50px 0;
+  }
+}
 .feature .feature__container .feature__content .feature__content-info {
   width: 60%;
   padding: 0 100px;
@@ -672,6 +736,11 @@ body {
     margin-top: 20px;
   }
 }
+@media screen and (max-width: 500px) {
+  .feature .feature__container .feature__content .feature__content-info h3 {
+    font-size: 24px;
+  }
+}
 .feature .feature__container .feature__content .feature__content-info p {
   color: #8887AA;
   font-size: 20px;
@@ -681,6 +750,11 @@ body {
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
   .feature .feature__container .feature__content .feature__content-info p {
     /* Styles for Desktops */
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .feature .feature__container .feature__content .feature__content-info p {
     font-size: 16px;
   }
 }
@@ -730,6 +804,13 @@ body {
     width: 80%;
   }
 }
+@media screen and (max-width: 500px) {
+  .pricing .pricing__container h2 {
+    width: 100%;
+    font-size: 32px;
+    margin-top: 75px;
+  }
+}
 .pricing .pricing__container p {
   color: #8887AA;
   width: 35%;
@@ -748,11 +829,23 @@ body {
     width: 100%;
   }
 }
+@media screen and (max-width: 500px) {
+  .pricing .pricing__container p {
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 50px;
+  }
+}
 .pricing .pricing__container .pricing__btns {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 150px;
+}
+@media screen and (max-width: 500px) {
+  .pricing .pricing__container .pricing__btns {
+    margin-bottom: 100px;
+  }
 }
 .pricing .pricing__container .pricing__btns a button {
   display: flex;
@@ -766,9 +859,21 @@ body {
   border-radius: 30px;
   margin-right: 30px;
 }
+@media screen and (max-width: 500px) {
+  .pricing .pricing__container .pricing__btns a button {
+    width: 120px;
+    height: 40px;
+  }
+}
 .pricing .pricing__container .pricing__btns a button span {
   font-size: 20px;
   padding-left: 25px;
+}
+@media screen and (max-width: 500px) {
+  .pricing .pricing__container .pricing__btns a button span {
+    font-size: 14px;
+    padding-left: 15px;
+  }
 }
 .pricing .pricing__container .pricing__btns .create-account {
   color: #8887AA;
@@ -776,6 +881,11 @@ body {
   font-weight: 700;
   border-bottom: 2px dotted rgba(136, 135, 170, 0.4);
   transition: 0.3s ease-in;
+}
+@media screen and (max-width: 500px) {
+  .pricing .pricing__container .pricing__btns .create-account {
+    font-size: 14px;
+  }
 }
 .pricing .pricing__container .pricing__btns .create-account:hover {
   opacity: 1;
