@@ -156,6 +156,10 @@ p {
   border-radius: 30px;
   width: 150px;
   height: 54px;
+  transition: 0.3s ease-in;
+}
+.footer__wrapper .footer__container .footer__right a button:hover {
+  background-color: #56DFCF;
 }
 .footer__wrapper .footer__container .footer__right a button span {
   color: #FFF;
@@ -182,6 +186,10 @@ p {
   width: 120px;
   height: 40px;
   border: none;
+  transition: 0.3s ease-in;
+}
+.navbar__btn:hover {
+  background-color: #504E7A;
 }
 
 .hero__btn {
@@ -191,6 +199,18 @@ p {
   width: 170px;
   height: 54px;
   border: none;
+  transition: 0.3s ease-in;
+}
+@media screen and (max-width: 500px) {
+  .hero__btn {
+    width: 140px;
+    height: 45px;
+    font-size: 14px;
+    padding-left: 10px;
+  }
+}
+.hero__btn:hover {
+  background-color: #504E7A;
 }
 
 .cta__btn {
@@ -255,7 +275,8 @@ p {
     top: 10vh;
     width: 100%;
     background-color: #252442;
-    transform: translateX(-100%);
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
   }
 }
 .navbar__wrapper .navbar__nav .navbar__nav-links li {
@@ -279,8 +300,16 @@ p {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .navbar__wrapper .navbar__nav .navbar__nav-links a .navbar__btn {
+    display: none;
+  }
+}
 .navbar__wrapper .navbar__nav .navbar__nav-links a .navbar__btn span {
   font-size: 16px;
+}
+.navbar__wrapper .navbar__nav .navbar__nav-links.active {
+  transform: translateX(0%);
 }
 .navbar__wrapper .navbar__nav .navbar__hamburger {
   display: none;
@@ -437,10 +466,6 @@ p {
 @media screen and (max-width: 768px) {
   .cta .cta__container {
     width: 80%;
-  }
-}
-@media screen and (max-width: 500px) {
-  .cta .cta__container {
     flex-direction: column;
   }
 }
@@ -455,13 +480,14 @@ p {
 }
 @media screen and (max-width: 768px) {
   .cta .cta__container h2 {
-    font-size: 32px;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
   }
 }
 @media screen and (max-width: 500px) {
   .cta .cta__container h2 {
-    text-align: center;
-    margin-bottom: 50px;
+    font-size: 24px;
   }
 }
 .cta .cta__container a .cta__btn {
@@ -598,9 +624,22 @@ body {
     margin-bottom: 200px;
   }
 }
+@media screen and (max-width: 500px) {
+  .about .about__container .about__clients {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 768px) {
   .about .about__container .about__clients .about__clients-logo {
     width: 100px;
+  }
+  .about .about__container .about__clients .about__clients-logo img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .about .about__container .about__clients .about__clients-logo {
+    width: 60px;
   }
   .about .about__container .about__clients .about__clients-logo img {
     width: 100%;
@@ -858,6 +897,10 @@ body {
   height: 58px;
   border-radius: 30px;
   margin-right: 30px;
+  transition: 0.3s ease-in;
+}
+.pricing .pricing__container .pricing__btns a button:hover {
+  background-color: #9998BA;
 }
 @media screen and (max-width: 500px) {
   .pricing .pricing__container .pricing__btns a button {
@@ -901,6 +944,11 @@ body {
 .cta .cta__container a .cta__btn {
   color: #4DCCBD;
   border: 5px solid #4DCCBD;
+  transition: 0.3s ease-in;
+}
+.cta .cta__container a .cta__btn:hover {
+  background-color: #4DCCBD;
+  color: #FFF;
 }
 @media screen and (max-width: 768px) {
   .cta .cta__container a .cta__btn {

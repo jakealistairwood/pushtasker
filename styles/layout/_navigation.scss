@@ -45,7 +45,8 @@
                 top: 10vh;
                 width: 100%;
                 background-color: $primaryPurple;
-                transform: translateX(-100%);
+                transform: translateX(120%);
+                transition: transform 0.5s ease-in;
             }
 
             li {
@@ -73,12 +74,20 @@
                     justify-content: center;
                     align-items: center;
 
+                    @media screen and (max-width: 768px) {
+                        display: none;
+                    }
+
                     span {
                         font-size: 16px;
                     }
                 }
             }
         }
+        .navbar__nav-links.active {
+            transform: translateX(0%);
+        }
+        
         .navbar__hamburger {
             display: none;
             height: 50px;
