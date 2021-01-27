@@ -12,6 +12,10 @@
   margin: 0;
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
@@ -86,6 +90,7 @@ p {
 .footer__wrapper .footer__container .footer__middle {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .footer__wrapper .footer__container .footer__middle .footer__middle-left,
 .footer__wrapper .footer__container .footer__middle .footer__middle-right {
@@ -124,10 +129,15 @@ p {
     padding: 0;
   }
 }
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .footer__wrapper .footer__container .footer__middle .footer__middle-left {
+    text-align: center;
+  }
+}
 .footer__wrapper .footer__container .footer__middle .footer__middle-right {
   padding-left: 60px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .footer__wrapper .footer__container .footer__middle .footer__middle-right {
     display: none !important;
   }
@@ -172,7 +182,7 @@ p {
   color: #59586F;
   text-align: right;
 }
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
+@media screen and (min-width: 769px) and (max-width: 1280px) {
   .footer__wrapper .footer__container .footer__right .footer__copyright {
     /* Styles for Desktops */
     font-size: 12px;
@@ -211,6 +221,7 @@ p {
 }
 .hero__btn:hover {
   background-color: #504E7A;
+  color: #FFF;
 }
 
 .cta__btn {
@@ -266,16 +277,7 @@ p {
 }
 @media screen and (max-width: 768px) {
   .navbar__wrapper .navbar__nav .navbar__nav-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    right: 0;
-    height: 40vh;
-    top: 10vh;
-    width: 100%;
-    background-color: #252442;
-    transform: translateX(-100%);
+    display: none;
   }
 }
 .navbar__wrapper .navbar__nav .navbar__nav-links li {
@@ -299,8 +301,16 @@ p {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .navbar__wrapper .navbar__nav .navbar__nav-links a .navbar__btn {
+    display: none;
+  }
+}
 .navbar__wrapper .navbar__nav .navbar__nav-links a .navbar__btn span {
   font-size: 16px;
+}
+.navbar__wrapper .navbar__nav .navbar__nav-links.active {
+  transform: translateX(0%);
 }
 .navbar__wrapper .navbar__nav .navbar__hamburger {
   display: none;
@@ -463,9 +473,8 @@ p {
 .cta .cta__container h2 {
   color: #FFF;
 }
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
+@media screen and (min-width: 769px) and (max-width: 1280px) {
   .cta .cta__container h2 {
-    /* Styles for Desktops */
     font-size: 40px;
   }
 }
@@ -494,7 +503,7 @@ p {
     height: 70px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .cta .cta__container a .cta__btn {
     width: 150px;
     height: 50px;
@@ -508,41 +517,65 @@ body {
   width: 100%;
 }
 
-.pricing__plans {
+.hero.pricing-hero {
+  height: 85vh;
+}
+@media screen and (max-width: 500px) {
+  .hero.pricing-hero {
+    height: 100vh;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  .hero.pricing-hero {
+    height: 60vh;
+  }
+}
+
+.pricing {
+  background-color: #F6F5F8;
+}
+.pricing .pricing__container {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+.pricing .pricing__container .pricing__plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2em;
   width: 60%;
   margin: 0 auto;
+  margin-bottom: 100px;
 }
-.pricing__plans .pricing__plan {
+.pricing .pricing__container .pricing__plans .pricing__plan {
   background-color: #FFF;
   box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.1);
   padding: 30px;
-  margin: 0 auto;
   border-radius: 12px;
-  margin-top: 200px;
-  width: 45%;
+  z-index: 500;
 }
 @media screen and (max-width: 768px) {
-  .pricing__plans .pricing__plan {
+  .pricing .pricing__container .pricing__plans .pricing__plan {
     margin-top: 100px;
   }
 }
-.pricing__plans .pricing__plan h2 {
+.pricing .pricing__container .pricing__plans .pricing__plan h2 {
   color: #252442;
   font-size: 48px;
   text-align: center;
   margin: 30px 0;
 }
 @media screen and (max-width: 768px) {
-  .pricing__plans .pricing__plan h2 {
+  .pricing .pricing__container .pricing__plans .pricing__plan h2 {
     font-size: 40px;
   }
 }
-.pricing__plans .pricing__plan p {
+.pricing .pricing__container .pricing__plans .pricing__plan p {
   color: #8887AA;
 }
-.pricing__plans .pricing__plan .pricing__plan-cost {
+.pricing .pricing__container .pricing__plans .pricing__plan .pricing__plan-cost {
   display: flex;
   position: relative;
   width: 100px;
@@ -553,7 +586,7 @@ body {
   margin: 0 auto;
   margin-top: 30px;
 }
-.pricing__plans .pricing__plan .pricing__plan-cost small {
+.pricing .pricing__container .pricing__plans .pricing__plan .pricing__plan-cost small {
   position: absolute;
   top: 0;
   left: 0;
@@ -561,43 +594,37 @@ body {
   font-size: 24px;
   font-weight: 400;
 }
-.pricing__plans .pricing__plan .pricing__plan-cost .pricing__plan-cost-value {
+.pricing .pricing__container .pricing__plans .pricing__plan .pricing__plan-cost .pricing__plan-cost-value {
   font-size: 48px;
   font-weight: 800;
   color: #252442;
 }
-.pricing__plans .pricing__plan .pricing__plan-features {
+.pricing .pricing__container .pricing__plans .pricing__plan .pricing__plan-features {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.pricing__plans .pricing__plan .pricing__plan-features h4 {
+.pricing .pricing__container .pricing__plans .pricing__plan .pricing__plan-features h4 {
   font-size: 24px;
   color: #252442;
   font-weight: 700;
   margin: 30px 0;
 }
 @media screen and (max-width: 768px) {
-  .pricing__plans .pricing__plan .pricing__plan-features h4 {
+  .pricing .pricing__container .pricing__plans .pricing__plan .pricing__plan-features h4 {
     margin: 15px 0;
   }
 }
-.pricing__plans .pricing__plan .pricing__plan-features p {
+.pricing .pricing__container .pricing__plans .pricing__plan .pricing__plan-features p {
   color: #8887AA;
 }
-.pricing__plans .pricing__plan .pricing__plan-features .pricing__plan-feature {
+.pricing .pricing__container .pricing__plans .pricing__plan .pricing__plan-features .pricing__plan-feature {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.pricing__plans .pricing__plan .pricing__plan-features p {
+.pricing .pricing__container .pricing__plans .pricing__plan .pricing__plan-features p {
   padding-left: 20px;
-}
-
-.plan-backgrounds {
-  height: 80vh;
-  width: 100%;
-  background-color: #F6F5F8;
 }
 
 .faqs {
@@ -617,6 +644,12 @@ body {
   text-align: center;
   margin: 100px 0;
   color: #252442;
+  font-size: 48px;
+}
+@media screen and (max-width: 768px) {
+  .faqs .faqs__container h2 {
+    font-size: 32px;
+  }
 }
 .faqs .faqs__container .faqs__questions {
   display: flex;
@@ -644,9 +677,20 @@ body {
   margin-bottom: 25px;
   width: 70%;
 }
+@media screen and (max-width: 500px) {
+  .faqs .faqs__container .faqs__questions .faqs__question h3 {
+    font-size: 20px;
+    width: 100%;
+  }
+}
 .faqs .faqs__container .faqs__questions .faqs__question p {
   font-size: 16px;
   color: #8887AA;
+}
+@media screen and (max-width: 500px) {
+  .faqs .faqs__container .faqs__questions .faqs__question p {
+    line-height: 30px;
+  }
 }
 
 .cta {
@@ -664,7 +708,7 @@ body {
   background-color: #FFF;
   color: #111111;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .cta .cta__container a .cta__btn {
     border: 2px solid #FFF;
   }

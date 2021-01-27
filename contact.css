@@ -12,6 +12,10 @@
   margin: 0;
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
@@ -211,6 +215,7 @@ p {
 }
 .hero__btn:hover {
   background-color: #504E7A;
+  color: #FFF;
 }
 
 .cta__btn {
@@ -266,16 +271,7 @@ p {
 }
 @media screen and (max-width: 768px) {
   .navbar__wrapper .navbar__nav .navbar__nav-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    right: 0;
-    height: 40vh;
-    top: 10vh;
-    width: 100%;
-    background-color: #252442;
-    transform: translateX(-100%);
+    display: none;
   }
 }
 .navbar__wrapper .navbar__nav .navbar__nav-links li {
@@ -299,8 +295,16 @@ p {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .navbar__wrapper .navbar__nav .navbar__nav-links a .navbar__btn {
+    display: none;
+  }
+}
 .navbar__wrapper .navbar__nav .navbar__nav-links a .navbar__btn span {
   font-size: 16px;
+}
+.navbar__wrapper .navbar__nav .navbar__nav-links.active {
+  transform: translateX(0%);
 }
 .navbar__wrapper .navbar__nav .navbar__hamburger {
   display: none;
@@ -505,5 +509,14 @@ p {
 
 body {
   height: 100%;
+  width: 100%;
+}
+
+.contact-hero {
+  height: 80vh;
+}
+
+.contact {
+  height: 100vh;
   width: 100%;
 }

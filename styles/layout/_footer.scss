@@ -36,6 +36,7 @@
         .footer__middle {
             display: flex;
             flex-direction: row;
+            align-items: center;
 
             .footer__middle-left,
             .footer__middle-right {
@@ -73,12 +74,16 @@
                 @media screen and (max-width: 768px) {
                     padding: 0;
                 }
+
+                @media screen and (min-width: 769px) and (max-width: 1024px) {
+                    text-align: center;
+                }
             }
 
             .footer__middle-right {
                 padding-left: 60px;
 
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: 1024px) {
                     display: none!important;
                 }
             }
@@ -127,7 +132,7 @@
                 color: $tertiaryPurple;
                 text-align: right;
 
-                @media screen and (min-width: 1025px) and (max-width: 1280px) {
+                @media screen and (min-width: 769px) and (max-width: 1280px) {
                     /* Styles for Desktops */
                     font-size: 12px;
                 }
