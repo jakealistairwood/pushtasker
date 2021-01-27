@@ -549,6 +549,11 @@ body {
   margin: 0 auto;
   margin-bottom: 100px;
 }
+@media screen and (max-width: 500px) {
+  .pricing .pricing__container .pricing__plans {
+    width: 80%;
+  }
+}
 .pricing .pricing__container .pricing__plans .pricing__plan {
   background-color: #FFF;
   box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.1);
