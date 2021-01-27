@@ -549,7 +549,7 @@ body {
   margin: 0 auto;
   margin-bottom: 100px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .pricing .pricing__container .pricing__plans {
     width: 80%;
   }
