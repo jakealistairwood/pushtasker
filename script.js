@@ -10,7 +10,7 @@ const toggleNav = () => {
 
 toggleNav();
 
-// FAQs
+// FAQs - Shows FAQ answers on toggle
 const questions = document.querySelectorAll('.faqs__question');
 console.log(questions);
 
