@@ -156,33 +156,47 @@
                 display: flex;
                 flex-direction: column;
                 width: 100%;
-                padding: 50px 0;
+                padding-top: 50px;
                 border-top: 1px solid $primaryGreen;
                 border-bottom: 1px solid $primaryGreen;
+                cursor: pointer;
 
                 @media screen and (max-width: 768px) {
                     width: 100%;
                 }
-                
-                h3 {
-                    font-size: $font-md;
-                    color: $primaryPurple;
-                    margin-bottom: 25px;
-                    width: 70%;
 
-                    @media screen and (max-width: 500px) {
-                        font-size: $font-sm;
-                        width: 100%;
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: flex-start;
+
+                    h3 {
+                        font-size: $font-md;
+                        color: $primaryPurple;
+                        margin-bottom: 25px;
+                        width: 70%;
+    
+                        @media screen and (max-width: 500px) {
+                            font-size: $font-sm;
+                            width: 100%;
+                        }
                     }
                 }
 
-                p {
+                .faq__answer {
+                    display: none;
                     font-size: $font-xs;
                     color: $secondaryPurple;
+                    padding-bottom: 50px;
 
                     @media screen and (max-width: 500px) {
                         line-height: 30px;
                     }
+                }
+
+                .active {
+                    display: block;
                 }
             }
         }
