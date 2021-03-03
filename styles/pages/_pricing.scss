@@ -1,0 +1,217 @@
+.hero.pricing-hero {
+    height: 85vh;
+
+    @media screen and (max-width: 500px) {
+        height: 100vh;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1280px) {
+        height: 60vh;
+    }
+}
+
+.pricing {
+    // min-height: 80vh;
+    background-color: $offWhite;
+
+    .pricing__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+
+        .pricing__plans {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 2em;
+            width: 60%;
+            margin: 0 auto;
+            margin-bottom: 100px;
+
+            @media screen and (max-width: 768px) {
+                width: 80%;
+            }
+        
+            .pricing__plan {
+                background-color: $white;
+                box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.1);
+                padding: 30px;
+                border-radius: 12px;
+                // margin-top: 200px;
+                z-index: 500;
+        
+                @media screen and (max-width: 768px) {
+                    margin-top: 100px;
+                }
+        
+                h2 {
+                    color: $primaryPurple;
+                    font-size: $font-xl;
+                    text-align: center;
+                    margin: 30px 0;
+        
+                    @media screen and (max-width: 768px) {
+                        font-size: 40px;
+                    }
+                }
+        
+                p {
+                    color: $secondaryPurple;
+                }
+        
+                .pricing__plan-cost {
+                    display: flex;
+                    position: relative;
+                    width: 100px;
+                    height: 110px;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto;
+                    margin-top: 30px;
+        
+                    small {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        color: $primaryGreen;
+                        font-size: $font-md;
+                        font-weight: 400;
+                    }
+                    
+                    .pricing__plan-cost-value {
+                        font-size: $font-xl;
+                        font-weight: 800;
+                        color: $primaryPurple;
+                    }
+                }
+        
+                .pricing__plan-features {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+        
+                    h4 {
+                        font-size: $font-md;
+                        color: $primaryPurple;
+                        font-weight: 700;
+                        margin: 30px 0;
+        
+                        @media screen and (max-width: 768px) {
+                            margin: 15px 0;
+                        }
+                    }
+        
+                    p {
+                        color: $secondaryPurple;
+                    }
+        
+                    .pricing__plan-feature {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                    }
+        
+                    p {
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.faqs {
+    width: 100%;
+    background-color: $white;
+
+    .faqs__container {
+        width: 50%;
+        margin: 0 auto;
+
+        @media screen and (max-width: 768px) {
+            width: 80%;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 100px 0;
+            color: $primaryPurple;
+            font-size: $font-xl;
+
+            @media screen and (max-width: 768px) {
+                font-size: $font-lg;
+            }
+        }
+
+        .faqs__questions {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 100px;
+
+            .faqs__question {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 50px 0;
+                border-top: 1px solid $primaryGreen;
+                border-bottom: 1px solid $primaryGreen;
+
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                }
+                
+                h3 {
+                    font-size: $font-md;
+                    color: $primaryPurple;
+                    margin-bottom: 25px;
+                    width: 70%;
+
+                    @media screen and (max-width: 500px) {
+                        font-size: $font-sm;
+                        width: 100%;
+                    }
+                }
+
+                p {
+                    font-size: $font-xs;
+                    color: $secondaryPurple;
+
+                    @media screen and (max-width: 500px) {
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cta {
+    background-color: $primaryGreen;
+
+    .cta__container {
+        h2 {
+            color: $white;
+        }
+         
+        a {
+            .cta__btn {
+                border: 5px solid $white;
+                color: $white;
+                transition: 0.3s ease-in;
+
+                &:hover {
+                    background-color: $white;
+                    color: #111111;
+                }
+
+                @media screen and (max-width: 1024px) {
+                    border: 2px solid $white;       
+                }
+            }
+        }
+    }
+}
